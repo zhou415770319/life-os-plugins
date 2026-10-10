@@ -7,13 +7,16 @@
       "name": "读书笔记",
       "description": "记录读书心得、摘抄与书评，支持 AI 语音添加与查询",
       "version": "1.0.0",
+      "routePath": "/reading-notes",
       "category": "lifestyle",
       "cardIcon": "book-open",
-      "routePath": "/reading-notes",
       "gradientFrom": "#a855f7",
       "gradientTo": "#ec4899",
-      "entry": "plugin.js",
-      "files": ["plugin.js", "README.md"],
+      "files": [
+        "manifest.json",
+        "plugin.js",
+        "README.md"
+      ],
       "aiMethods": [
         {
           "id": "addNote",
@@ -22,10 +25,30 @@
           "kind": "add",
           "collection": "notes",
           "params": [
-            { "name": "title", "type": "string", "required": true, "description": "书名或笔记标题，必填" },
-            { "name": "author", "type": "string", "required": false, "description": "作者" },
-            { "name": "rating", "type": "number", "required": false, "description": "评分（1-5）" },
-            { "name": "content", "type": "string", "required": false, "description": "笔记内容" }
+            {
+              "name": "title",
+              "type": "string",
+              "required": true,
+              "description": "书名或笔记标题，必填"
+            },
+            {
+              "name": "author",
+              "type": "string",
+              "required": false,
+              "description": "作者"
+            },
+            {
+              "name": "rating",
+              "type": "number",
+              "required": false,
+              "description": "评分（1-5）"
+            },
+            {
+              "name": "content",
+              "type": "string",
+              "required": false,
+              "description": "笔记内容"
+            }
           ]
         },
         {
@@ -43,7 +66,12 @@
           "kind": "delete",
           "collection": "notes",
           "params": [
-            { "name": "id", "type": "string", "required": true, "description": "笔记 ID，必填" }
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "笔记 ID，必填"
+            }
           ]
         }
       ]
