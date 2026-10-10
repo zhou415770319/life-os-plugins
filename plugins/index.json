@@ -13,7 +13,10 @@
       "gradientFrom": "#a855f7",
       "gradientTo": "#ec4899",
       "entry": "plugin.js",
-      "files": ["plugin.js", "README.md"],
+      "files": [
+        "plugin.js",
+        "README.md"
+      ],
       "aiMethods": [
         {
           "id": "addNote",
@@ -22,10 +25,30 @@
           "kind": "add",
           "collection": "notes",
           "params": [
-            { "name": "title", "type": "string", "required": true, "description": "书名或笔记标题，必填" },
-            { "name": "author", "type": "string", "required": false, "description": "作者" },
-            { "name": "rating", "type": "number", "required": false, "description": "评分（1-5）" },
-            { "name": "content", "type": "string", "required": false, "description": "笔记内容" }
+            {
+              "name": "title",
+              "type": "string",
+              "required": true,
+              "description": "书名或笔记标题，必填"
+            },
+            {
+              "name": "author",
+              "type": "string",
+              "required": false,
+              "description": "作者"
+            },
+            {
+              "name": "rating",
+              "type": "number",
+              "required": false,
+              "description": "评分（1-5）"
+            },
+            {
+              "name": "content",
+              "type": "string",
+              "required": false,
+              "description": "笔记内容"
+            }
           ]
         },
         {
@@ -43,9 +66,31 @@
           "kind": "delete",
           "collection": "notes",
           "params": [
-            { "name": "id", "type": "string", "required": true, "description": "笔记 ID，必填" }
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "笔记 ID，必填"
+            }
           ]
         }
+      ]
+    },
+    {
+      "pluginKey": "dsh-plugin-child-tv",
+      "name": "儿童定时播放",
+      "description": "儿童定时播放・家长远程控制：mpv 定时全屏播放本地/网络音视频，家长可远程播放、停止、锁定电脑，儿童观看页无操作按钮",
+      "version": "1.0.0",
+      "routePath": "/child-tv-admin",
+      "category": "education",
+      "cardIcon": "tv",
+      "gradientFrom": "#f43f5e",
+      "gradientTo": "#8b5cf6",
+      "entry": "plugin.js",
+      "files": [
+        "manifest.json",
+        "plugin.js",
+        "README.md"
       ]
     }
   ]
