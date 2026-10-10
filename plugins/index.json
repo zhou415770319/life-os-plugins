@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "source": "github:zhou415770319/life-os-plugins",
+  "plugins": [
+    {
+      "pluginKey": "reading-notes",
+      "name": "读书笔记",
+      "description": "记录读书心得、摘抄与书评，支持 AI 语音添加与查询",
+      "version": "1.0.0",
+      "category": "lifestyle",
+      "cardIcon": "book-open",
+      "routePath": "/reading-notes",
+      "gradientFrom": "#a855f7",
+      "gradientTo": "#ec4899",
+      "entry": "plugin.js",
+      "files": ["plugin.js", "README.md"],
+      "aiMethods": [
+        {
+          "id": "addNote",
+          "name": "添加读书笔记",
+          "description": "在读书笔记插件中添加一条笔记",
+          "kind": "add",
+          "collection": "notes",
+          "params": [
+            { "name": "title", "type": "string", "required": true, "description": "书名或笔记标题，必填" },
+            { "name": "author", "type": "string", "required": false, "description": "作者" },
+            { "name": "rating", "type": "number", "required": false, "description": "评分（1-5）" },
+            { "name": "content", "type": "string", "required": false, "description": "笔记内容" }
+          ]
+        },
+        {
+          "id": "listNotes",
+          "name": "查询读书笔记",
+          "description": "查询读书笔记列表",
+          "kind": "list",
+          "collection": "notes",
+          "params": []
+        },
+        {
+          "id": "deleteNote",
+          "name": "删除读书笔记",
+          "description": "删除一条读书笔记（危险操作）",
+          "kind": "delete",
+          "collection": "notes",
+          "params": [
+            { "name": "id", "type": "string", "required": true, "description": "笔记 ID，必填" }
+          ]
+        }
+      ]
+    }
+  ]
+}
