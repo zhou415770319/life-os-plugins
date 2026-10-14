@@ -7,13 +7,13 @@
       "name": "读书笔记",
       "description": "记录读书心得、摘抄与书评，支持 AI 语音添加与查询",
       "version": "1.0.0",
+      "routePath": "/reading-notes",
       "category": "lifestyle",
       "cardIcon": "book-open",
-      "routePath": "/reading-notes",
       "gradientFrom": "#a855f7",
       "gradientTo": "#ec4899",
-      "entry": "plugin.js",
       "files": [
+        "manifest.json",
         "plugin.js",
         "README.md"
       ],
