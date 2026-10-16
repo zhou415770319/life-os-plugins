@@ -1,14 +1,15 @@
 {
   "pluginKey": "dsh-plugin-child-tv",
   "name": "儿童定时播放",
-  "description": "儿童定时播放・删除绑定账号",
-  "version": "1.0.1",
+  "description": "儿童定时播放・单机模式：mpv 定时全屏置顶播放本地/网络音视频，家长可远程播放/停止、管理时段与内容来源，儿童观看页纯展示",
+  "version": "1.2.0",
   "category": "education",
   "cardIcon": "tv",
   "routePath": "/child-tv-admin",
   "gradientFrom": "#f43f5e",
   "gradientTo": "#8b5cf6",
   "entry": "plugin.js",
+  "serverEntry": "server.js",
   "files": [
     "plugin.js",
     "README.md"
