@@ -80,7 +80,7 @@
       "pluginKey": "dsh-plugin-child-tv",
       "name": "儿童定时播放",
       "description": "儿童定时播放・单机模式：mpv 定时全屏置顶播放本地/网络音视频，家长可远程播放/停止、管理时段与内容来源，儿童观看页纯展示",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "routePath": "/child-tv-admin",
       "category": "education",
       "cardIcon": "tv",
